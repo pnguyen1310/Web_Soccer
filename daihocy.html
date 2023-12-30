@@ -1,0 +1,393 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dịch vụ sân bóng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navigation {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 0 10px;
+            font-size: 18px;
+        }
+
+        .navigation a:hover {
+            background-color: white;
+            color: green;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 8%;
+            margin-top: 8%;
+            border: 2px solid;
+            border-radius: 50px;
+            background-color: rgb(224, 223, 221);
+            height: 180em;
+        }
+
+        .container .item {
+            margin-left: 3%;
+            margin-right: 2%;
+            margin-top: 2%;
+        }
+
+
+        .item .address {
+            background-color: rgb(185, 182, 182);
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Lobster', cursive;
+        }
+
+        .item .content {
+            border: 1px solid gray;
+            height: 190px;
+            background-color: aliceblue;
+
+        }
+
+        .item .diachi {
+            padding: 10px;
+            font-size: 18px;
+
+        }
+
+        .item .map {
+            padding: 10px;
+            border: 1px solid rgb(148, 145, 145);
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            margin: auto;
+            text-decoration: none;
+            color: black;
+        }
+
+        .booking1 {
+            border: 1px solid gray;
+            height: 640px;
+        }
+
+        .booking1 .datsan {
+            background-color: rgb(185, 182, 182);
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Lobster', cursive;
+        }
+
+        .content:hover .map {
+            color: rgb(69, 184, 69);
+        }
+
+        .infor {
+            padding-left: 30px;
+
+        }
+
+
+
+        .form-input1 {
+            width: 148px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 4px;
+            padding: 0 20px;
+            background-color: rgb(224, 223, 221);
+            box-shadow: 4px 5px 4px #0000005C;
+        }
+
+        .description {
+            background-color: rgb(224, 223, 221);
+            border: 1px solid black;
+            border-radius: 4px;
+            color: black;
+            box-shadow: 8px 10px 10px #0000005C;
+        }
+
+
+
+        .form-input {
+            padding: 20px;
+            border: 1px solid #333131;
+            border-radius: 4px;
+            width: 230px;
+            height: 50px;
+            padding: 0 20px;
+            transition: .25 ease;
+            background-color: rgb(224, 223, 221);
+            box-shadow: 4px 5px 4px #0000005C;
+        }
+
+        .form-input:focus {
+            border-color: #5d5794;
+        }
+
+        .form {
+            position: relative;
+        }
+
+        .form-lable {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 21px;
+            user-select: none;
+            color: black;
+            pointer-events: none;
+            transition: .25s ease;
+
+        }
+
+        .form-input:focus+.form-lable {
+            top: 0;
+            padding: 10px;
+            display: inline-block;
+            color: black;
+            background-color: rgb(224, 223, 221);
+        }
+
+        .submit {
+            width: 90%;
+            height: 40px;
+            background-color: rgb(50, 170, 56);
+            border: 2px solid black;
+            border-radius: 50px 10px 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+
+        .select {
+            width: 130px;
+            height: 40px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid black;
+            border-radius: 4px;
+            background-color: rgb(224, 223, 221);
+            box-shadow: 8px 10px 10px #0000005C;
+        }
+
+        .des {
+            width: 1000px;
+            height: 88em;
+            max-width: 100%;
+            border: 2px solid gray;
+            border-radius: 4px;
+            padding: 0;
+            box-shadow: 5px 7px 5px rgb(175, 169, 169);
+
+
+        }
+
+        .des .mota {
+            background-color: rgb(170, 167, 167);
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .des .thongtin {
+            padding: 20px;
+            padding-top: 50px;
+            font-size: 16px;
+            letter-spacing: 0.3px;
+            line-height: 1.2;
+        }
+
+        .ruler {
+            border: 2px solid grey;
+            width: 700px;
+            max-width: 100%;
+            box-shadow: 5px 10px 5px rgb(192, 186, 186);
+        }
+
+        .ruler .noiquy {
+            background-color: rgb(170, 167, 167);
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+        .ruler .noiquy1 {
+            padding: 20px;
+            padding-left: 10%;
+        }
+
+        .backhome {
+            border: 2px solid rgb(164, 196, 91);
+            float: right;
+            padding: 10px;
+            background-color: #b86868;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .no-underline {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navigation">
+        <a href="index.html">Trang chủ</a>
+        <a href="trangtintuc.html">Tin Tức</a>
+        <a href="trangchukhoahoc.html">Các khóa học</a>
+        <a href="cacdichvu.html">Dịch vụ</a>
+        <a href="datlich.html">Liên hệ</a>
+    </div>
+    <div class="container">
+        <div class="item">
+            <div class="title">
+                <h2>Sân Bóng Đại Học Y Hà Nội</h2>
+                <i class="fa-solid fa-star" style="color:rgb(211, 147, 29)"></i>
+                <i class="fa-solid fa-star" style="color:rgb(211, 147, 29)"></i>
+                <i class="fa-solid fa-star" style="color:rgb(211, 147, 29)"></i>
+                <i class="fa-solid fa-star" style="color:rgb(211, 147, 29)"></i>
+                <i class="fa-solid fa-star" style="color:rgb(211, 147, 29)"></i>
+            </div>
+
+            <br><br>
+
+            <div class="img">
+                <img src="https://datsantructuyen.vn/images/products/2022/08/24/original/san-bong-dai-hoc-y-img4_1661350930.jpg"
+                    alt="" width="810px">
+                <br>
+                <img src="https://datsantructuyen.vn/images/products/2022/08/24/large/20200619_174609_1661350942.jpg"
+                    width="200px">
+                <img src="https://datsantructuyen.vn/images/products/2022/08/24/large/san-bong-dai-hoc-y-img3_1661350917.jpg"
+                    alt="" width="200px">
+                <img src="https://datsantructuyen.vn/images/products/2022/08/24/original/san-bong-dai-hoc-y-img1_1661350930.jpg"
+                    alt="" width="200PX">
+                <img src="https://thegioithethao.vn/images/products_soccer/2021/02/24/large/san-bong-dai-hoc-y-duoc-hcm-img_1614174714.jpg"
+                    alt="" width="200px">
+            </div>
+            <h1>Mô tả sân</h1>
+            <div class="thongtin">
+                <div style="font-size: 24px;">Bạn muốn thuê sân bóng Đại Học Y Hà Nội?</div>
+                <br>
+                <a href="sanbongdaihocy.html" style="text-decoration: none;">Sân Bóng Đại Học Y</a> nằm trong khuôn viên
+                trường đại học Y Hà Nội tại quận Đống Đa , một trong những quận sầm uất và phát triển nhất Hà Nội. Đây
+                là một trong những sân bóng đời đầu và là địa điểm không thể bỏ qua cho những cầu thủ, đội bóng tại khu
+                vực quận Đống Đa.
+                <br><br>
+                <div>
+                    Sân bóng rộng được đầu từ đồng bộ, hiện đại, sân bóng trung tâm có kích thước tổng là 100m x 50m,
+                    được chia thành 4 sân đơn 7 người. Sân phụ bao quanh dùng để đỗ xe vì hệ thống lót sân không có
+                    thoát nước và đã gồ ghề xuống cấp. So với các sân xung quanh , đây chắc chắn là một sự lựa chọn lý
+                    tưởng , văn minh vì năm trong khuôn viên trường đại học Y.
+                </div>
+                <br>
+                <div>
+                    Sân bóng Đại Học Y lúc nào cũng trong tình trạng full sân, bạn muốn tìm kiếm lịch đá định kỳ , cần
+                    phải liên hẹ với chủ sân đặt trước thời gian khá dài để nếu có đội nào bỏ mình có thể xen vào luôn.
+                    Còn những trận đấu giờ đêm từ 20h30 - 22h, hoặc giờ chiều cuối tuần , thì khả năng còn sân là tương
+                    đối cao. Để có thêm thông tin chi tiết bạn có thể liên hệ qua HOTLINE: <u>0984567899</u>.
+                </div>
+                <br>
+                <div style="font-size: 24px;">Dịch vụ tại sân:</div>
+                <ul>
+                    <li> Có chỗ để ô tô, xe máy thuận tiện.</li><br>
+                    <li> Cho thuê bóng, áo đấu.</li><br>
+                    <li> Đặt sân tìm đối, tìm trọng tài...</li><br>
+                    <li> Wifi miễn phí, khu dịch vụ căng tin.</li><br>
+                    <li> Nhà ăn, khu công trình phụ trợ.</li><br>
+                    <li> An ninh đảm bảo, bảo vệ trức 24/7.</li><br>
+                </ul>
+                <div style="font-size: 24px;">Giá thuê sân bóng Đại Học Y:</div>
+                <ul>
+                    <li> Giá giao động từ <u style="color: red; "> 500.000 VND</u> giờ thường đến <u
+                            style="color: red; "> 1.000.000 VND</u> giờ vàng.</li>
+                </ul>
+                <div style="font-size: 24px;">Địa chỉ đến sân bóng:</div>
+                <ul>
+                    <li> <b> Khuôn viên trường Đại Học Y Hà Nội</b> , Số 1 Tôn Thất Tùng , Phường Khương Thượng, quận
+                        Đống Đa, Hà Nội.</li><br>
+                    <li>Bạn có thể di chuyển bằng xe máy , ô tô cá nhận hoặc phương tiện công cộng như xe Bus.</li><br>
+                    <li>Không phải xuất trình giấy tờ khi vào trường.</li><br>
+                    <li>Sân bóng nằm ngay trục đường trung tâm vòa ký túc xá, bên cạnh nhà thi đấu Đại Học Y.</li><br>
+                    <li>Xem chi tiết tại đây:</li>
+                </ul>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1862.3910348130576!2d105.8333531!3d21.0013712!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac7c68fa8747%3A0x139ac447ce79888b!2zU8OibiB24bqtbiDEkeG7mW5nIMSQSCBZIEjDoCBO4buZaSwgMSBQLiBUw7RuIFRo4bqldCBUw7luZywgS2jGsMahbmcgVGjGsOG7o25nLCDEkOG7kW5nIMSQYSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1683632487197!5m2!1svi!2s"
+                    width="800" height="400" style="border:1px solid gray; border-radius: 10px;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            </div>
+            <div class="ruler">
+                <div class="noiquy">Nội quy sân bóng đá:</div><br>
+                <div class="noiquy1">
+                    Điều 1: Khi vào sân gửi xe đúng nơi quy định. <br>
+                    Điều 2: Cấm đem vũ khí, các chất dễ nổ, dễ cháy vào sân bóng. <br>
+                    Điều 2: Cấm đem vũ khí, các chất dễ nổ, dễ cháy vào sân bóng. <br>
+                    Điều 3: Cấm cờ bạc dưới mọi hình thức. <br>
+                    Điều 4: Tự kiểm tra sức khỏe trước khi thi đấu. <br>
+                    Điều 5: Cấm sử dụng các chất kích thích trước và trong khi thi đấu. <br>
+                    Điều 6: Thi đấu Faiplay, không gây gổ hoặc đánh nhau. <br>
+                    Điều 7: Tuân thủ các quyết định của trọng tài khi thi đấu. <br>
+                    Điều 8: Không được mang giày đinh, giày đế cứng vào sân bóng.<br>
+                    Điều 9: Cấm hút thuốc trong sân bóng.<br>
+                    Điều 10: Cấm đem trẻ nhỏ vào khu vực thi đấu.<br>
+                    Điều 11: Không được xả rác bừa bãi trong sân bóng.<br>
+                    Điều 12: Bảo vệ tài sản và tuân thủ những đề nghị của quản lý sân bóng.<br><br>
+                    <i style="padding-left:23%; font-weight: bold;">Hân hạnh được tài trợ quý khách!!!!</i>
+                </div>
+
+            </div>
+</body>
+
+</html>

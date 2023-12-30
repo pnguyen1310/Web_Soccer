@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keyword" content="bong ro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khoá học bóng chuyền</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff;
+            margin: 0;
+        }
+        h1{
+            padding-left: 30px;
+        }
+        h2{
+            padding-left: 30px;
+        }
+        nav li {
+            padding: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline;
+            width: auto;
+            height: auto;
+            text-align: center;
+        }
+        nav ul{
+            display: flex;
+        }
+        nav{
+            background-color:lightgray;
+            color:black;
+            display: flex;
+            justify-content: left;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        nav a{
+            padding: 10px;
+            color: black;
+            text-decoration: none;           
+        }
+        nav a:hover {
+            background-color:gray ;
+            color:whitesmoke ;
+        border-radius: 10px;
+    }
+        .logo img{
+            margin: 1em;
+            width: 120px;
+            height:120px;
+            
+        }
+        button{
+            font-size: 2rem;
+            padding: 0.6rem 1rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(to right, #c31432, #892211);
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            cursor: pointer;
+            border: none;
+            width: 60%;
+            
+        }
+        button:hover{
+            background: white;
+            outline: 1px solid red;
+            color: red;
+            border: none;
+        }
+        .container {
+            max-width: 90rem;
+            margin: 2rem auto;
+            padding: 0px 2rem;
+          }
+        .row{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+        }
+        button.moreinfo a{
+            text-decoration: none;
+        }
+        .description{
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        .heroimage img{
+            width: 102%;
+            height: auto;
+            display: flex;
+        }
+        .anh{
+            display: block;
+            width: 60%;
+            margin:0 auto;
+
+        }
+        .submit{
+            width: fit-content;
+        }
+        .message-display {
+            white-space: pre-wrap;
+          }
+          .slideshow {
+            position: relative;
+            height: 400px;
+            width: 600px;
+            overflow: hidden;
+          }         
+          .slideshow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+          }         
+          #slide1:checked ~ .slideshow img:nth-of-type(1),
+          #slide2:checked ~ .slideshow img:nth-of-type(2),
+          #slide3:checked ~ .slideshow img:nth-of-type(3),
+          #slide4:checked ~ .slideshow img:nth-of-type(4){
+            opacity: 1;
+          }
+          textarea {
+            min-height: 400px;
+            transition: min-height 0.5s;
+          }
+          textarea:empty {
+            min-height: 200px;
+            min-width: 400px; 
+          }
+          section {
+            padding: 30px 0;
+            position: relative;
+            min-height: auto;
+            width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row;
+            flex-flow: row;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+        #bg-div {
+            background-color: rgb(231, 209, 209);
+          }
+        p{
+            margin: 50px;
+        }
+        .box {           
+            padding-right: 20px;
+            padding-bottom: 10px;
+            background-color: lightgray;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="trangchukhoahoc.html">Trang chủ</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li><a href="chitietbongchuyen.html">Chi tiết khóa học</a></li>
+        </ul>
+        <div class="logo">
+            <img src="https://www.shutterstock.com/image-vector/volleyball-icon-logo-isolated-black-260nw-1188140185.jpg">
+        </div>
+    </nav>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="info">
+                    <h2>Hướng dẫn bóng chuyền cho người mới</h2>
+                    <p class="description">
+                        Chương trình hỗ trợ giúp cho con em của bạn thỏa sức đam mê với bóng chuyền
+                    </p>                                  
+        <button class="moreinfo"><a href="dangki.html">ĐĂNG KÍ NGAY</a></button>
+    </div>       
+        <div class="heroimage">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Algeria_and_Japan_women%27s_national_volleyball_team_at_the_2012_Summer_Olympics_%287913959028%29.jpg">
+        </div>
+    </div>
+    </div>
+    </section>
+    <table class="box">
+        <tr class="logo">
+          <th><img src="https://bongrotuoitre.vn/wp-content/uploads/2020/05/icon-giay-bong-ro-300x300.png"><h2>Tăng khả năng phối hợp vận động</h2></th>
+          <th><img src="https://bongrotuoitre.vn/wp-content/uploads/2020/05/icon-qua-bong-ro-1-300x300.png"><h2>Phát triển chiều cao và thể chất toàn diện</h2></th>
+        </tr>
+        <tr>
+          <td>Các bài tập và giáo án được biên soạn phù hợp với từng lứa tuổi và khả năng vận động khác nhau, nhằm mục đích tăng phối hợp vận động tốt nhất.</td>
+          <td>Học bóng chuyền là một môn thể thao tuyệt vời để phát triển các kỹ năng cơ bản và kỹ năng xã hội của trẻ.</td>
+        </tr>
+        <tr>
+          <td>Những kỹ thuật căn bản như chuyền bóng, rê bóng,.. được các HLV rất coi trọng, bởi đây là nền tảng của việc hoàn thiện các kỹ thuật trong bóng chuyền</td>
+          <td>Tại mỗi thời điểm phát triển, việc sẻ chia luôn cần thiết cho các con, giúp con biết yêu thương mọi người, bè bạn và xây dựng một lối sống lành mạnh với tinh thần tập thể.</td>
+        </tr>
+        <tr>
+          <td colspan="2"><img src="https://cdn.firstcry.com/education/2022/05/16110335/370769438.jpg" width=70%; ></td>
+        </tr>
+      </table>
+
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dịch vụ sân bóng</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navigation {
+      background-color: green;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      padding: 0 10px;
+      font-size: 18px;
+    }
+
+    .navigation a:hover {
+      background-color: white;
+      color: green;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 20px;
+    }
+
+    img {
+      border-radius: 10px;
+      margin: 20px auto;
+      display: block;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .nguyen h2 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .nguyen1 h1 {
+      font-size: 24px;
+      text-align: left;
+      margin-top: 130px;
+    }
+
+    .nguyen2 h1 {
+      font-size: 24px;
+      text-align: left;
+      margin-top: 130px;
+    }
+
+    .nguyen2 {
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .nguyen2-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nguyen2 h1 {
+      flex-basis: 100%;
+      font-size: 24px;
+      text-align: left;
+      margin-top: 130px;
+    }
+
+    .nguyen2-text {
+      flex-basis: 50%;
+    }
+
+    .nguyen2-image {
+      flex-basis: 50%;
+      text-align: right;
+    }
+
+    .nguyen2-image img {
+      border-radius: 10px;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .book {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 50px 0;
+    }
+
+    .book img {
+      transition: transform 0.3s ease;
+    }
+
+    .book img:hover {
+      transform: scale(1.1);
+    }
+
+    .datsan {
+      width: 300px;
+      margin-bottom: 50px;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .no-underline {
+      text-decoration: none;
+    }
+
+    .tintuc {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .attraction {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .attraction img {
+      max-width: 400px;
+      border: 5px solid #fff;
+      border-radius: 5px;
+      margin-right: 20px;
+    }
+
+    .attraction img {
+      transition: transform 0.3s ease;
+    }
+
+    .attraction img:hover {
+      transform: scale(1.1);
+    }
+
+    .attraction h3 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .attraction h2 {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .attraction p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .container {
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navigation">
+    <h1 style="color: white;">Dịch vụ sân bóng số 1 Việt Nam</h1>
+    <a href="sanbong.html">Trang chủ</a>
+    <a href="#tintuc">Tin Tức</a>
+    <a href="trangchukhoahoc.html">Các khóa học</a>
+    <a href="cacdichvu.html">Dịch vụ</a>
+    <a href="datlich.html">Liên hệ</a>
+  </div>
+  <section>
+    <div class="nguyen1">
+      <h1>Giới thiệu về trung tâm</h1>
+      <p>Chào mừng đến với trang web đặt sân bóng, dịch vụ thể thao và tin tức thể thao đa dạng. Tại đây, bạn có thể dễ
+        dàng đặt sân bóng, tham gia các khóa học cầu lông, bóng rổ, bơi lội và bóng chuyền, cùng cập nhật tin tức thể
+        thao nhanh chóng. Tận hưởng trải nghiệm thể thao tốt nhất và khám phá một cộng đồng yêu thích thể thao đam mê
+        giống bạn!</p>
+
+      <div class="slider-container">
+        <div class="slider">
+          <img
+            src="https://cdn.lawnet.vn//uploads/NewsThumbnail/2020/09/28/133425Lap-quy-hoach-ke-hoach-su-dung-dat-cho-the-duc-the-thao.jpg"
+            alt="Hình ảnh 1">
+          <img src="https://lagi.binhthuan.gov.vn/SiteFolders/svhttdl/4808/2020/Th%C3%A1ng%2011/IMG_20200218_145114.jpg"
+            alt="Hình ảnh 2">
+          <img
+            src="https://file.hstatic.net/200000264087/file/67299621_2958559910884632_3272994946201681920_n_2958559877551302_ba22941b720c41b2bca6042b0866d0e0_2048x2048.jpg"
+            alt="Hình ảnh 3">
+          <img src="https://dayboihanoi.vn/wp-content/uploads/2022/02/day-boi-cho-nguoi-lon-gia-bao-nhieu.jpg"
+            alt="Hình ảnh 4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Badminton_Semifinal_Pan_2007.jpg"
+            alt="Hình ảnh 5">
+          <img src="https://theducbangtam.com.vn/bong-chuyen-tang-chieu-cao/wp-content/uploads/2023/03/b1.jpg"
+            alt="Hình ảnh 6">
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var slider = $('.nguyen1 .slider');
+        var images = slider.find('img');
+        var currentIndex = 0;
+        var slideWidth = $('.nguyen1 .slider-container').width();
+        var interval = setInterval(nextSlide, 2000);
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % images.length;
+          slider.css('transform', 'translateX(-' + (currentIndex * slideWidth) + 'px)');
+        }
+      });
+    </script>
+
+    <style>
+      .nguyen1 .slider-container {
+        width: 600px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+      }
+
+      .nguyen1 .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .nguyen1 img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+    <div class="nguyen">
+      <h2>Đặt lịch sân bóng</h2>
+    </div>
+    <div class="book">
+      <div class="datsan">
+        <a href="daihocy.html" class="no-underline">
+          <img
+            src="https://datsantructuyen.vn/images/products/2022/08/24/original/san-bong-dai-hoc-y-img4_1661350930.jpg" />
+        </a>
+        <a href="daihocy.html" class="no-underline">
+          <h3> Sân bóng đại học y </h3>
+        </a>
+      </div>
+      <div class="datsan">
+        <a href="sanbongdongdo.html">
+          <img
+            src="https://media.diadiem247.com/uploads/w900/2021/01/23/san-bong-thanh-do-1_1610137319600bc2d2ab714_11f23f7b547aaab937185ff454232f4f.jpg" />
+        </a>
+        <a href="sanbongdongdo.html" class="no-underline">
+          <h3>Sân bóng đông đô</h3>
+        </a>
+      </div>
+      <div class="datsan">
+        <a href="sanbonghocvientaichinh.html">
+          <img src="https://topvn.vn/wp-content/uploads/2019/11/S%C3%A2n-Thi%C3%AAn-Tr%C6%B0%E1%BB%9Dng-1.jpg" />
+        </a>
+        <a href="sanbonghocvientaichinh.html" class="no-underline">
+          <h3>sân bóng học viện tài chính</h3>
+      </div>
+      <div class="datsan">
+        <a href="sanbonghoangmai.html">
+          <img src="https://vecgroup.vn/images/news/2021/07/31/large/san-bong-hoang-mai_1627746811.jpg" />
+        </a>
+        <a href="sanbonghoangmai.html" class="no-underline">
+          <h3>Sân bóng hoàng mai</h3>
+      </div>
+      <div class="datsan">
+        <a href="sanbongdaihochanoi.html">
+          <img src="https://tnrmt.vnuf.edu.vn/documents/39796078/95635843/8.jpg?t=1594463551652" />
+        </a>
+        <a href="sanbongdaihochanoi.html" class="no-underline">
+          <h3>Sân bóng đại học Hà Nội</h3>
+        </a>
+      </div>
+    </div>
+    <section id="tintuc"></section>
+    <div class="tintuc">
+      <h1>sự kiện tin tức thể thao</h1>
+      <div class="attraction">
+        <a href="tintuc1.html">
+          <img
+            src="https://e1.365dm.com/23/05/768x432/skysports-ilkay-gundogan-manchester-city_6162924.jpg?20230521185836"
+            alt="tintuc1">
+        </a>
+        <div>
+          <a href="tintuc1.html">
+            <h2>Haaland và dàn sao Man City ăn mừng vô địch đầy cảm xúc</h2>
+          </a>
+          <p>Bấm để xem chi tiết</p>
+        </div>
+      </div>
+      <div class="attraction">
+        <a href="tintuc2.html">
+          <img src="https://static-images.vnncdn.net/files/publish/2023/5/21/harry-kane-851.jpg" alt="tintuc2">
+        </a>
+        <div>
+          <a href="tintuc2.html">
+            <h2>Real Madrid chi 100 triệu euro mua Harry Kane</h2>
+          </a>
+          <p>Bấm để xem chi tiết</p>
+        </div>
+      </div>
+      <div class="attraction">
+        <a href="tintuc3.html">
+          <img src="https://static-images.vnncdn.net/files/publish/2023/5/21/kim-min-jae-864.jpg" alt="tintuc3">
+        </a>
+        <div>
+          <a href="tintuc3.html">
+            <h2>MU chốt nhanh thương vụ Kim Min Jae</h2>
+          </a>
+          <p>Bấm để xem chi tiết</p>
+        </div>
+      </div>
+      <div class="attraction">
+        <a href="tintuc4.html">
+          <img src="https://static-images.vnncdn.net/files/publish/2023/5/20/u22-doihinh2-767.jpg" alt="tintuc4">
+        </a>
+        <div>
+          <a href="tintuc4.html">
+            <h2>U22 Việt Nam: Về đâu sau SEA Games 32?</h2>
+          </a>
+          <p>Bấm để xem chi tiết</p>
+        </div>
+      </div>
+    </div>
+    <div class="nguyen2">
+      <div class="nguyen2-content">
+        <h1>Các khóa học của trung tâm</h1>
+        <div class="nguyen2-text">
+          <p>Chào mừng bạn đến với Trung tâm Huấn luyện của chúng tôi! Với niềm đam mê và sự cam kết tận tâm, chúng tôi
+            tự hào mang đến cho bạn những khóa học chuyên sâu về cầu lông, bóng rổ, bơi và bóng chuyền.</p>
+          <p>Với đội ngũ huấn luyện viên giàu kinh nghiệm, chúng tôi đảm bảo mang đến cho học viên những trải nghiệm
+            tuyệt vời và cơ hội để phát triển toàn diện. Tại Trung tâm Huấn luyện, chúng tôi không chỉ tập trung vào
+            việc rèn luyện kỹ thuật, mà còn giúp học viên hiểu rõ về chiến thuật và nâng cao sức bền cần thiết trong môi
+            trường chuyên nghiệp và thân thiện.</p>
+          <p>Chúng tôi cam kết tạo ra một môi trường học tập và rèn luyện đầy đủ tiện nghi và hiện đại. Trang bị tối
+            tân, sân tập chất lượng cao và các thiết bị đạt chuẩn quốc tế sẽ giúp học viên nâng cao khả năng và thăng
+            tiến trong môn thể thao yêu thích của mình.</p>
+          <!-- HTML -->
+          <button onclick="redirectToPage()">Chi tiết các khóa học</button>
+          <script>// JavaScript
+            function redirectToPage() {
+              window.location.href = 'trangchukhoahoc.html';
+            }
+          </script>
+
+        </div>
+        <div class="nguyen2-image">
+          <img
+            src="https://theducbangtam.com.vn/wp-content/uploads/2018/08/z3391591422518_649cd9eba256ad49898a652d8656a2f9-3.jpg"
+            alt="Hình ảnh">
+        </div>
+      </div>
+
+    </div>
+
+    <footer style="background-color: green; color: white; text-align: center; padding: 10px;">
+      <p>Bản quyền © 2023 Dịch vụ sân bóng số 1 Việt Nam. All rights reserved.</p>
+      <p>Liên hệ: 0977694318 | Email: nguyendaophucnguyen13@gmail.com</p>
+    </footer>
+
+
+</body>
+
+</html>
